@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscripción a las Materias</title>
+    <style>
+        .titulo {
+            color: blue;
+        }
+
+        .email-container {
+            margin-top: 20px;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.24/jspdf.plugin.autotable.min.js"></script>
+</head>
+
+<body>
+    <legend><div><h1 class="titulo">TECNICATURA EN DESARROLLO DE SOFTWARE</h1>
+            <h2>Inscripcion al Cursado de las Materias</h2></div></legend>
+    <div>
+        <form>
+            <fieldset>
+                <legend>
+                    <h3 class="titulo">PRIMER AÑO</h3>
+                </legend>
+                <fieldset>
+                    <label for="materia1-presencial">Sistemas Operativos<br>(1er Año)</label>
+                    <input type="checkbox" name="materia1" value="presencial" onclick="uncheckOthers(this)">
+                    Presencial
+                    <input type="checkbox" name="materia1" value="semipresencial" onclick="uncheckOthers(this)">
+                    Semi Presencial
+                    <input type="checkbox" name="materia1" value="libre" onclick="uncheckOthers(this)"> Libre
+                    <input type="checkbox" name="materia1" value="No me inscribo" onclick="uncheckOthers(this)"> No me
+                    inscribo
+                </fieldset>
+                <fieldset>
+                    <label for="materia2-presencial">Comunicacion<br>(1er Año)</label>
+                    <input type="checkbox" name="materia2" value="presencial" onclick="uncheckOthers(this)">
+                    Presencial
+                    <input type="checkbox" name="materia2" value="semipresencial" onclick="uncheckOthers(this)">
+                    Semi Presencial
+                    <input type="checkbox" name="materia2" value="libre" onclick="uncheckOthers(this)"> Libre
+                    <input type="checkbox" name="materia2" value="No me inscribo" onclick="uncheckOthers(this)"> No me
+                    inscribo
+                </fieldset>
+                <!-- Agrega los demás fieldsets aquí -->
+            <fieldset>
+            <label for="materia3-presencial">Unidad de Definicion Institucional I - Lengua<br>(1er Año)</label>
+            <input type="checkbox" name="materia3" value="presencial" onclick="uncheckOthers(this)">
+    Presencial
+            <input type="checkbox" name="materia3" value="semipresencial" onclick="uncheckOthers(this)">
+    Semi Presencial
+            <input type="checkbox" name="materia3" value="libre" onclick="uncheckOthers(this)"> Libre
+            <input type="checkbox" name="materia3" value="No me inscribo" onclick="uncheckOthers(this)"> No me
+    inscribo
+            </fieldset>
+            <fieldset>
+    <label for="materia4-presencial">Matematica<br>(1er Año)</label>
+    <input type="checkbox" name="materia4" value="presencial" onclick="uncheckOthers(this)">
+    Presencial
+    <input type="checkbox" name="materia4" value="semipresencial" onclick="uncheckOthers(this)">
+    Semi Presencial
+    <input type="checkbox" name="materia4" value="libre" onclick="uncheckOthers(this)"> Libre
+    <input type="checkbox" name="materia4" value="No me inscribo" onclick="uncheckOthers(this)"> No me
+    inscribo
+</fieldset>
+<fieldset>
+    <label for="materia5-presencial">Ingles Tecnico I<br>(1er Año)</label>
+    <input type="checkbox" name="materia5" value="presencial" onclick="uncheckOthers(this)">
+    Presencial
+    <input type="checkbox" name="materia5" value="semipresencial" onclick="uncheckOthers(this)">
+    Semi Presencial
+    <input type="checkbox" name="materia5" value="libre" onclick="uncheckOthers(this)"> Libre
+    <input type="checkbox" name="materia5" value="No me inscribo" onclick="uncheckOthers(this)"> No me
+    inscribo
+</fieldset>
+<fieldset>
+    <label for="materia6-presencial">Administracion<br>(1er Año)</label>
+    <input type="checkbox" name="materia6" value="presencial" onclick="uncheckOthers(this)">
+    Presencial
+    <input type="checkbox" name="materia6" value="semipresencial" onclick="uncheckOthers(this)">
+    Semi Presencial
+    <input type="checkbox" name="materia6" value="libre" onclick="uncheckOthers(this)"> Libre
+    <input type="checkbox" name="materia6" value="No me inscribo" onclick="uncheckOthers(this)"> No me
+    inscribo
+</fieldset>
+<fieldset>
+    <label for="materia7-presencial">Tecnologias de la Informacion<br>(1er Año)</label>
+    <input type="checkbox" name="materia7" value="presencial" onclick="uncheckOthers(this)">
+    Presencial
+    <input type="checkbox" name="materia7" value="semipresencial" onclick="uncheckOthers(this)">
+    Semi Presencial
+    <input type="checkbox" name="materia7" value="libre" onclick="uncheckOthers(this)"> Libre
+    <input type="checkbox" name="materia7" value="No me inscribo" onclick="uncheckOthers(this)"> No me
+    inscribo
+</fieldset>
+<fieldset>
+    <label for="materia8-presencial">Logica y Estructura de Datos<br>(1er Año)</label>
+    <input type="checkbox" name="materia8" value="presencial" onclick="uncheckOthers(this)">
+    Presencial
+    <input type="checkbox" name="materia8" value="semipresencial" onclick="uncheckOthers(this)">
+    Semi Presencial
+    <input type="checkbox" name="materia8" value="libre" onclick="uncheckOthers(this)"> Libre
+    <input type="checkbox" name="materia8" value="No me inscribo" onclick="uncheckOthers(this)"> No me
+    inscribo
+</fieldset>
+<fieldset>
+    <label for="materia9-presencial">Ingenieria de Software I<br>(1er Año)</label>
+    <input type="checkbox" name="materia9" value="presencial" onclick="uncheckOthers(this)">
+    Presencial
+    <input type="checkbox" name="materia9" value="semipresencial" onclick="uncheckOthers(this)">
+    Semi Presencial
+    <input type="checkbox" name="materia9" value="libre" onclick="uncheckOthers(this)"> Libre
+    <input type="checkbox" name="materia9" value="No me inscribo" onclick="uncheckOthers(this)"> No me
+    inscribo
+</fieldset>
+</fieldset>
+            <fieldset>
+                <legend>
+                    <h3 class="titulo">SEGUNDO AÑO</h3>
+                </legend>
+                <!-- Agrega fieldsets similares para segundo año --> <!-- Repite los fieldsets para todas las materias del segundo año -->
+                <fieldset>
+                    <label for="materia10-presencial">Unidad de Definicion Institucional II<br>(2do Año)</label>
+                    <input type="checkbox" name="materia10" value="presencial" onclick="uncheckOthers(this)">
+                    Presencial
+                    <input type="checkbox" name="materia10" value="semipresencial" onclick="uncheckOthers(this)">
+                    Semi Presencial
+                    <input type="checkbox" name="materia10" value="libre" onclick="uncheckOthers(this)"> Libre
+                    <input type="checkbox" name="materia10" value="No me inscribo" onclick="uncheckOthers(this)"> No me
+                    inscribo
+                </fieldset>
+                <fieldset>
+                    <label for="materia11-presencial">Prblematicas Socio Contemporaneas<br>(2do Año)</label>
+                    <input type="checkbox" name="materia11" value="presencial" onclick="uncheckOthers(this)">
+                    Presencial
+                    <input type="checkbox" name="materia11" value="semipresencial" onclick="uncheckOthers(this)">
+                    Semi Presencial
+                    <input type="checkbox" name="materia11" value="libre" onclick="uncheckOthers(this)"> Libre
+                    <input type="checkbox" name="materia11" value="No me inscribo" onclick="uncheckOthers(this)"> No me
+                    inscribo
+                </fieldset>
+<fieldset>
+    <label for="materia12-presencial">Ingles Tecnico I<br>(2do Año)</label>
+    <input type="checkbox" name="materia12" value="presencial" onclick="uncheckOthers(this)">
+    Presencial
+    <input type="checkbox" name="materia12" value="semipresencial" onclick="uncheckOthers(this)">
+    Semi Presencial
+    <input type="checkbox" name="materia12" value="libre" onclick="uncheckOthers(this)"> Libre
+    <input type="checkbox" name="materia12" value="No me inscribo" onclick="uncheckOthers(this)"> No me
+    inscribo
+</fieldset>
+<fieldset>
+    <label for="materia13-presencial">Innovacion y Desarrollo Emprendedor<br>(2do Año)</label>
+    <input type="checkbox" name="materia13" value="presencial" onclick="uncheckOthers(this)">
+    Presencial
+    <input type="checkbox" name="materia13" value="semipresencial" onclick="uncheckOthers(this)">
+    Semi Presencial
+    <input type="checkbox" name="materia13" value="libre" onclick="uncheckOthers(this)"> Libre
+    <input type="checkbox" name="materia13" value="No me inscribo" onclick="uncheckOthers(this)"> No me
+    inscribo
+</fieldset>
+<fieldset>
+    <label for="materia14-presencial">Estadistica<br>(2do Año)</label>
+    <input type="checkbox" name="materia14" value="presencial" onclick="uncheckOthers(this)">
+    Presencial
+    <input type="checkbox" name="materia14" value="semipresencial" onclick="uncheckOthers(this)">
+    Semi Presencial
+    <input type="checkbox" name="materia14" value="libre" onclick="uncheckOthers(this)"> Libre
+    <input type="checkbox" name="materia14" value="No me inscribo" onclick="uncheckOthers(this)"> No me
+    inscribo
+</fieldset>
+<fieldset>
+    <label for="materia15-presencial">Programacion I<br>(2do Año)</label>
+    <input type="checkbox" name="materia15" value="presencial" onclick="uncheckOthers(this)">
+    Presencial
+    <input type="checkbox" name="materia15" value="semipresencial" onclick="uncheckOthers(this)">
+    Semi Presencial
+    <input type="checkbox" name="materia15" value="libre" onclick="uncheckOthers(this)"> Libre
+    <input type="checkbox" name="materia15" value="No me inscribo" onclick="uncheckOthers(this)"> No me
+    inscribo
+</fieldset>
+<fieldset>
+    <label for="materia16-presencial">Ingenieria de Software II<br>(2do Año)</label>
+    <input type="checkbox" name="materia16" value="presencial" onclick="uncheckOthers(this)">
+    Presencial
+    <input type="checkbox" name="materia16" value="semipresencial" onclick="uncheckOthers(this)">
+    Semi Presencial
+    <input type="checkbox" name="materia16" value="libre" onclick="uncheckOthers(this)"> Libre
+    <input type="checkbox" name="materia16" value="No me inscribo" onclick="uncheckOthers(this)"> No me
+    inscribo
+</fieldset>
+<fieldset>
+    <label for="materia17-presencial">Base de Datos I<br>(2do Año)</label>
+    <input type="checkbox" name="materia17" value="presencial" onclick="uncheckOthers(this)">
+    Presencial
+    <input type="checkbox" name="materia17" value="semipresencial" onclick="uncheckOthers(this)">
+    Semi Presencial
+    <input type="checkbox" name="materia17" value="libre" onclick="uncheckOthers(this)"> Libre
+    <input type="checkbox" name="materia17" value="No me inscribo" onclick="uncheckOthers(this)"> No me
+    inscribo
+</fieldset>
+<fieldset>
+    <label for="materia18-presencial">Practica Profesionalizante I<br>(2do Año)</label>
+    <input type="checkbox" name="materia18" value="presencial" onclick="uncheckOthers(this)">
+    Presencial
+    <input type="checkbox" name="materia18" value="semipresencial" onclick="uncheckOthers(this)">
+    Semi Presencial
+    <input type="checkbox" name="materia18" value="libre" onclick="uncheckOthers(this)"> Libre
+    <input type="checkbox" name="materia18" value="No me inscribo" onclick="uncheckOthers(this)"> No me
+    inscribo
+</fieldset>
+            </fieldset>
+            <fieldset>
+                <legend>
+                    <h3 class="titulo">TERCER AÑO</h3>
+                </legend>
+                <!-- Agrega fieldsets similares para tercer año -->
+                <fieldset>
+                    <label for="materia19-presencial">Derecho y Legislacion Laboral<br>(3er Año)</label>
+                    <input type="checkbox" name="materia19" value="presencial" onclick="uncheckOthers(this)">
+                    Presencial
+                    <input type="checkbox" name="materia19" value="semipresencial" onclick="uncheckOthers(this)">
+                    Semi Presencial
+                    <input type="checkbox" name="materia19" value="libre" onclick="uncheckOthers(this)"> Libre
+                    <input type="checkbox" name="materia19" value="No me inscribo" onclick="uncheckOthers(this)"> No me
+                    inscribo
+                </fieldset>
+                <!-- Repite los fieldsets para todas las materias del tercer año -->
+<fieldset>
+    <label for="materia20-presencial">Etica y Responsabilidad Social<br>(3er Año)</label>
+    <input type="checkbox" name="materia20" value="presencial" onclick="uncheckOthers(this)">
+    Presencial
+    <input type="checkbox" name="materia20" value="semipresencial" onclick="uncheckOthers(this)">
+    Semi Presencial
+    <input type="checkbox" name="materia20" value="libre" onclick="uncheckOthers(this)"> Libre
+    <input type="checkbox" name="materia20" value="No me inscribo" onclick="uncheckOthers(this)"> No me
+    inscribo
+</fieldset>
+<fieldset>
+    <label for="materia21-presencial">Redes y Comunicacion<br>(3er Año)</label>
+    <input type="checkbox" name="materia21" value="presencial" onclick="uncheckOthers(this)">
+    Presencial
+    <input type="checkbox" name="materia21" value="semipresencial" onclick="uncheckOthers(this)">
+    Semi Presencial
+    <input type="checkbox" name="materia21" value="libre" onclick="uncheckOthers(this)"> Libre
+    <input type="checkbox" name="materia21" value="No me inscribo" onclick="uncheckOthers(this)"> No me
+    inscribo
+</fieldset>
+<fieldset>
+    <label for="materia22-presencial">Programacion II<br>(3er Año)</label>
+    <input type="checkbox" name="materia22" value="presencial" onclick="uncheckOthers(this)">
+    Presencial
+    <input type="checkbox" name="materia22" value="semipresencial" onclick="uncheckOthers(this)">
+    Semi Presencial
+    <input type="checkbox" name="materia22" value="libre" onclick="uncheckOthers(this)"> Libre
+    <input type="checkbox" name="materia22" value="No me inscribo" onclick="uncheckOthers(this)"> No me
+    inscribo
+</fieldset>
+<fieldset>
+    <label for="materia23-presencial">Gestion de Proyectos de Software<br>(3er Año)</label>
+    <input type="checkbox" name="materia23" value="presencial" onclick="uncheckOthers(this)">
+    Presencial
+    <input type="checkbox" name="materia23" value="semipresencial" onclick="uncheckOthers(this)">
+    Semi Presencial
+    <input type="checkbox" name="materia23" value="libre" onclick="uncheckOthers(this)"> Libre
+    <input type="checkbox" name="materia23" value="No me inscribo" onclick="uncheckOthers(this)"> No me
+    inscribo
+</fieldset>
+<fieldset>
+    <label for="materia24-presencial">Base de Datos II<br>(3er Año)</label>
+    <input type="checkbox" name="materia24" value="presencial" onclick="uncheckOthers(this)">
+    Presencial
+    <input type="checkbox" name="materia24" value="semipresencial" onclick="uncheckOthers(this)">
+    Semi Presencial
+    <input type="checkbox" name="materia24" value="libre" onclick="uncheckOthers(this)"> Libre
+    <input type="checkbox" name="materia24" value="No me inscribo" onclick="uncheckOthers(this)"> No me
+    inscribo
+</fieldset>
+<fieldset>
+    <label for="materia25-presencial">Practica Profesionalizantes II<br>(3er Año)</label>
+    <input type="checkbox" name="materia25" value="presencial" onclick="uncheckOthers(this)">
+    Presencial
+    <input type="checkbox" name="materia25" value="semipresencial" onclick="uncheckOthers(this)">
+    Semi Presencial
+    <input type="checkbox" name="materia25" value="libre" onclick="uncheckOthers(this)"> Libre
+    <input type="checkbox" name="materia25" value="No me inscribo" onclick="uncheckOthers(this)"> No me
+    inscribo
+</fieldset>
+</fieldset>
+            <div class="email-container">
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <br>
+            <button type="button" onclick="generarPDF()">Generar PDF</button>
+        </form>
+    </div>
+    <script>
+        function uncheckOthers(checkbox) {
+            const checkboxes = checkbox.closest('fieldset').querySelectorAll('input[type="checkbox"]');
+            checkboxes.forEach(box => {
+                if (box !== checkbox) {
+                    box.checked = false;
+                }
+            });
+        }
+
+        function generarPDF() {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+
+            const formElements = document.querySelectorAll('form fieldset');
+            const email = document.getElementById('email').value;
+
+            let tableRows = [];
+            const materiasProcesadas = new Set();
+            const colors = {
+                'PRIMER AÑO': [0, 0, 255], // Azul
+                'SEGUNDO AÑO': [0, 255, 0], // Verde
+                'TERCER AÑO': [255, 0, 0] // Rojo
+            };
+            const separationColor = [200, 200, 200]; // Gris para la fila de separación
+
+            formElements.forEach((fieldset) => {
+                const legend = fieldset.querySelector('legend h3');
+                if (legend) {
+                    const year = legend.innerText;
+                    if (tableRows.length > 0) {
+                        tableRows.push({
+                            content: '',
+                            styles: {
+                                fillColor: separationColor,
+                                cellWidth: 'wrap'
+                            }
+                        });
+                    }
+                    tableRows.push({
+                        content: year,
+                        styles: {
+                            halign: 'center',
+                            fillColor: colors[year],
+                            textColor: [255, 255, 255],
+                            fontSize: 12,
+                            fontStyle: 'bold',
+                            cellWidth: 'wrap'
+                        }
+                    });
+                }
+
+                const checkboxes = fieldset.querySelectorAll('input[type="checkbox"]');
+                checkboxes.forEach(checkbox => {
+                    if (checkbox.checked) {
+                        const label = checkbox.closest('fieldset').querySelector('label').innerText;
+                        if (!materiasProcesadas.has(label)) {
+                            tableRows.push([label, checkbox.value]);
+                            materiasProcesadas.add(label);
+                        }
+                    }
+                });
+            });
+
+            doc.text(`Correo electrónico: ${email}`, 10, 10);
+
+            doc.autoTable({
+                head: [['Materia', 'Tipo de Inscripción']],
+                body: tableRows,
+                startY: 20,
+                theme: 'grid',
+                styles: {
+                    cellPadding: 3,
+                    fontSize: 10,
+                    valign: 'middle',
+                    overflow: 'linebreak',
+                    tableWidth: 'wrap',
+                    cellWidth: 'wrap',
+                },
+                headStyles: {
+                    fillColor: [255, 255, 255],
+                    textColor: [0, 0, 0],
+                    lineWidth: 0.1,
+                },
+            });
+
+            doc.save('inscripcion.pdf');
+        }
+    </script>
+</body>
+
+</html>

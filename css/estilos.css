@@ -1,0 +1,75 @@
+/* Colors */
+/* Spacings */
+/* Font-family */
+/* Font-Sizes */
+/* Normalize */
+*::after,
+*::before,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1em;
+}
+
+img {
+  width: 100%;
+}
+
+html {
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+  font-size: 1em;
+}
+
+body {
+  position: relative;
+  padding-bottom: 50px;
+  min-height: 100vh;
+}
+
+.logo_escuela {
+  width: 100%;
+  height: auto;
+}
+
+.encabezado {
+  background-color: #05758b;
+  color: #ffffff;
+
+}
+
+.foto_home {
+  width: 100%;
+  height: auto;
+}
+
+.titulo__tabla {
+  background-color: #05758b;
+  color: #ffffff;
+}
+
+.titulo__parrafo {
+  color: #05758b;
+  font-weight: bold;
+}
+
+.piedepagina {
+  background-color: #05758b;
+  color: #ffffff;
+  padding: 20px 0 10px 0;
+  margin-top: 20px;
+  position: absolute !important;
+  bottom: 0;
+  width: 100%;
+  height: 4%;
+  text-align: center;
+}/*# sourceMappingURL=estilos.css.map */

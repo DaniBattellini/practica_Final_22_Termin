@@ -1,0 +1,24 @@
+/* Normalize */
+*::after,
+*::before,
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    
+}
+
+body {
+    font-family:  $font-principal;
+    font-size: $text-small;
+}
+
+
+
+img {
+    width: 100%;
+}
